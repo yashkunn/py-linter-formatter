@@ -9,7 +9,8 @@ def format_linter_error(error: dict) -> dict:
     }
 
 
-# checks for list content and sets the appropriate status and handles errors with the first method
+# checks for list content and sets the appropriate status
+# and handles errors with the first method
 def format_single_linter_file(file_path: str, errors: list) -> dict:
     return {
         "errors": [format_linter_error(error) for error in errors],
